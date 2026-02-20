@@ -10,6 +10,7 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.CreativeModeTab;
+import namename.modid.item.ModItems;
 
 /// this is a comment stating that ItemGroup -> .world.item.CreativeModeTab
 
