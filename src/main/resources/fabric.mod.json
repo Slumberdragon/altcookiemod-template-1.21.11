@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "altcookiemod",
+	"version": "${version}",
+	"name": "altcookiemod",
+	"description": "cookies...yay",
+	"authors": [
+		"Clovers"
+	],
+	"contact": {
+		"homepage": "",
+		"sources": ""
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/altcookiemod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"namename.modid.Altcookiemod"
+		],
+		"client": [
+			"namename.modid.AltcookiemodClient"
+		]
+	},
+	"mixins": [
+		"altcookiemod.mixins.json",
+		{
+			"config": "altcookiemod.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.18.4",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
