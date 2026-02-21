@@ -1,13 +1,14 @@
 package namename.modid.item;
 
 import namename.modid.Altcookiemod;
-import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.item.v1.FabricItem;
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Item.Properties;
 
@@ -28,7 +29,7 @@ public class ModItems {
 
         return item;
 
-}
+    }
 
     public static final Item SNOWCOOKIE = register("snowcookie", Item::new, new Item.Properties());
     public static final Item CREEPERCOOKIE = register("creepercookie", Item::new, new Item.Properties());
@@ -37,19 +38,21 @@ public class ModItems {
     public static final Item DIRTCOOKIE = register("dirtcookie", Item::new, new Item.Properties());
 
 
-
     private static Item registerItem(String name, Item item) {
 
         return item;
+
+
     }
-
-
-
 
     public static void registerModItems() {
-        Altcookiemod.LOGGER.info("Registering Mod Items for" + Altcookiemod.MOD_ID);
+        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.FOOD_AND_DRINKS).register(entries -> {
+            entries.accept(SNOWCOOKIE);
+            entries.accept(CREEPERCOOKIE);
+            entries.accept(CHARGED_CREEPERCOOKIE);
+            entries.accept(CUTECOOKIE);
+            entries.accept(DIRTCOOKIE);
 
-
+        });
     }
 }
-

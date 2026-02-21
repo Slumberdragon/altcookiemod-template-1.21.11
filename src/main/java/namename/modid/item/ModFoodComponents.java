@@ -1,7 +1,7 @@
 package namename.modid.item;
 
 import net.minecraft.world.food.FoodProperties;
-import namename.modid.item.ModItems;
+
 
 public class ModFoodComponents {
     public static final FoodProperties SNOWCOOKIE = new FoodProperties.Builder().nutrition(3).saturationModifier(0.25f).build();
@@ -10,3 +10,4 @@ public class ModFoodComponents {
     public static final FoodProperties CUTECOOKIE = new FoodProperties.Builder().nutrition(3).saturationModifier(0.25f).build();
     public static final FoodProperties DIRTCOOKIE = new FoodProperties.Builder().nutrition(3).saturationModifier(0.25f).build();
 }
+

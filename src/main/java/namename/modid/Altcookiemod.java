@@ -16,6 +16,7 @@ public class Altcookiemod implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		ModItems.registerModItems();
+
 	}
 
 
