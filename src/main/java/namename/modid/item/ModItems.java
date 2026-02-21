@@ -1,8 +1,8 @@
 package namename.modid.item;
 
 import namename.modid.Altcookiemod;
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-
+import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.item.v1.FabricItem;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -13,7 +13,6 @@ import net.minecraft.world.item.Item.Properties;
 
 import java.util.function.Function;
 
-import static net.minecraft.core.Registry.register;
 
 public class ModItems {
 
@@ -28,36 +27,29 @@ public class ModItems {
         Registry.register(BuiltInRegistries.ITEM, itemKey, item);
 
         return item;
-    }
 
 }
 
-    public static final Item SNOWCOOKIE = registerItem("suspicious_substance", Item::new, new Item.Properties());
-    public static final Item CREEPERCOOKIE = registerItem("suspicious_substance", Item::new, new Item.Properties());
-    public static final Item CHARGED_CREEPERCOOKIE = registerItem("suspicious_substance", Item::new, new Item.Properties());
-    public static final Item CUTECOOKIE = registerItem("suspicious_substance", Item::new, new Item.Properties());
-    public static final Item DIRTCOOKIE = registerItem("suspicious_substance", Item::new, new Item.Properties());
+    public static final Item SNOWCOOKIE = register("snowcookie", Item::new, new Item.Properties());
+    public static final Item CREEPERCOOKIE = register("creepercookie", Item::new, new Item.Properties());
+    public static final Item CHARGED_CREEPERCOOKIE = register("charged_creepercookie", Item::new, new Item.Properties());
+    public static final Item CUTECOOKIE = register("cutecookie", Item::new, new Item.Properties());
+    public static final Item DIRTCOOKIE = register("dirtcookie", Item::new, new Item.Properties());
 
 
 
     private static Item registerItem(String name, Item item) {
 
-        return register(Registries.ITEM, Identifier.parse("altcookiemod", "snowcookie", SNOWCOOKIE));
-        return register(Registries.ITEM, Identifier.parse("altcookiemod", "creepercookie", CREEPERCOOKIE));
-        return register(Registries.ITEM, Identifier.parse("altcookiemod", "charged_creepercookie", CHARGED_CREEPERCOOKIE));
-        return register(Registries.ITEM, Identifier.parse("altcookiemod", "cutecookie", CUTECOOKIE));
-        return register(Registries.ITEM, Identifier.parse("altcookiemod", "dirtcookie", DIRTCOOKIE));
-
+        return item;
     }
+
+
 
 
     public static void registerModItems() {
         Altcookiemod.LOGGER.info("Registering Mod Items for" + Altcookiemod.MOD_ID);
 
 
-        };
-
-    public static void initialize() {
     }
 }
 
