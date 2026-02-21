@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": "minecraft:sugar",
+    "X": "minecraft:gunpowder",
+    "G": "minecraft:green_dye"
+  },
+  "pattern": [
+    "#X#",
+    " G "
+  ],
+  "result": {
+    "count": 8,
+    "id": "altcookiemod:creepercookie"
+  }
+}

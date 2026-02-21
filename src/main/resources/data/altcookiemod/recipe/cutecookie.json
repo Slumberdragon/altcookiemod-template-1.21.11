@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": "minecraft:sugar",
+    "X": "minecraft:axolotl_bucket"
+  },
+  "pattern": [
+    "#X#",
+    " # "
+  ],
+  "result": {
+    "count": 8,
+    "id": "altcookiemod:cutecookie"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": "minecraft:sugar",
+    "D": "minecraft:dirt",
+    "X": "minecraft:cocoa_beans"
+
+  },
+  "pattern": [
+    "#D#",
+    " X "
+  ],
+  "result": {
+    "count": 8,
+    "id": "altcookiemod:dirtcookie"
+  }
+}
