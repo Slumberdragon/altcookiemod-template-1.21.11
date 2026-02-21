@@ -14,6 +14,9 @@ import net.minecraft.world.item.Item.Properties;
 
 import java.util.function.Function;
 
+import static namename.modid.item.ModFoodComponents.*;
+import static net.minecraft.world.item.Items.registerItem;
+
 
 public class ModItems {
 
@@ -31,11 +34,11 @@ public class ModItems {
 
     }
 
-    public static final Item SNOWCOOKIE = register("snowcookie", Item::new, new Item.Properties());
-    public static final Item CREEPERCOOKIE = register("creepercookie", Item::new, new Item.Properties());
-    public static final Item CHARGED_CREEPERCOOKIE = register("charged_creepercookie", Item::new, new Item.Properties());
-    public static final Item CUTECOOKIE = register("cutecookie", Item::new, new Item.Properties());
-    public static final Item DIRTCOOKIE = register("dirtcookie", Item::new, new Item.Properties());
+    public static final Item SNOWCOOKIE = register("snowcookie", Item::new, new Item.Properties().food(JUMP_BOOST_FOOD_COMPONENT, JUMP_BOOST_FOOD_CONSUMABLE_COMPONENT));
+    public static final Item CREEPERCOOKIE = register("creepercookie", Item::new, new Item.Properties().food(LUCK_FOOD_COMPONENT, LUCK_FOOD_CONSUMABLE_COMPONENT));
+    public static final Item CHARGED_CREEPERCOOKIE = register("charged_creepercookie", Item::new, new Item.Properties().food(KABOOM_FOOD_COMPONENT, KABOOM_FOOD_CONSUMABLE_COMPONENT));
+    public static final Item CUTECOOKIE = register("cutecookie", Item::new, new Item.Properties().food(SPEED_FOOD_COMPONENT, SPEED_FOOD_CONSUMABLE_COMPONENT));
+    public static final Item DIRTCOOKIE = register("dirtcookie", Item::new, new Item.Properties().food(HASTE_FOOD_COMPONENT, HASTE_FOOD_CONSUMABLE_COMPONENT));
 
 
     private static Item registerItem(String name, Item item) {
