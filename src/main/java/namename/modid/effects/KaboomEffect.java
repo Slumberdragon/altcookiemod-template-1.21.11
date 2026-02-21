@@ -39,7 +39,8 @@ public class KaboomEffect extends MobEffect {
         if (entity instanceof Player) {
 
             ((Player) entity).playSound(LIGHTNING_BOLT_IMPACT, 2f, 0.7f);
-            ((Player) entity).kill((ServerLevel) level);
+            //((Player) entity).kill((ServerLevel) level);
+            ((Player) entity).attack((Player) entity);
 
 
 
